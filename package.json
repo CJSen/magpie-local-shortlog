@@ -9,10 +9,21 @@
   "magpie": {
     "hooks": "./src/hooks.ts",
     "options": {
+      "enabled": false,
       "file": "conversations.log",
+      "dir": "",
+      "format": "text",
       "maxFileMB": 20,
       "keepFiles": 5,
-      "skipAux": true
+      "origins": ["local"],
+      "skipPaths": ["/v1/messages/count_tokens", "/v1/models", "/v1beta/models"],
+      "skipAux": true,
+      "showToolCalls": true,
+      "showReasoning": false,
+      "maxTextKB": 256,
+      "systemReprintHours": 6,
+      "redactKeys": [],
+      "debug": false
     }
   },
   "files": ["src", "README.md"]
