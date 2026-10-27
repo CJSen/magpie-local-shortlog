@@ -1,0 +1,19 @@
+{
+  "name": "magpie-local-shortlog",
+  "version": "0.3.0",
+  "private": true,
+  "type": "module",
+  "description": "Local shortlog for the magpie gateway: what the user asked, what the model answered, prompts included, tools and tool output stripped. One append-only file rotated at 20MB, never leaves this machine.",
+  "license": "MIT",
+  "keywords": ["magpie", "magpie-plugin", "shortlog", "conversation", "local", "local-only"],
+  "magpie": {
+    "hooks": "./src/hooks.ts",
+    "options": {
+      "file": "conversations.log",
+      "maxFileMB": 20,
+      "keepFiles": 5,
+      "skipAux": true
+    }
+  },
+  "files": ["src", "README.md"]
+}
